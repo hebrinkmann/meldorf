@@ -71,20 +71,92 @@ name: Beispiele
 
 # Beispiele
 
---
+---
+template: Beispiele
 
-* [Dieselgate](https://media.ccc.de/v/32c3-7331-the_exhaust_emissions_scandal_dieselgate)
-* [Seidenstraße](https://media.ccc.de/v/30C3_-_5610_-__-_saal_2_-_201312271245_-_seidenstrasse_-_m_-_jeff_mann_-_frank_-_diani_barreto)
-* S7
+
+## Dieselgate
+
+* Autohersteller schummeln auf bei der Abgasmessung
+* Prüfstanderkennung
+* Felix Domke liest Steuersoftware seines VW aus
+* Er findet die Funktionen, die die Prüfstanderkennung durchführen.
+* Er weist nach, dass die Abgasreinigung abgeschaltet wird, wenn der Prüfzyklus nicht erkannt wird.
+* [Video](https://media.ccc.de/v/32c3-7331-the_exhaust_emissions_scandal_dieselgate)
+
+---
+template: Beispiele
+
+
+
+## Seidenstraße
+
+* Rohrpost aus Drainagerohr
+* Kapseln aus 1,5l PET-Flaschen
+* Kapseln aus dem 3D-Drucker
+* Antrieb mit Industriestaubsaugern
+* [Video](https://media.ccc.de/v/30C3_-_5610_-__-_saal_2_-_201312271245_-_seidenstrasse_-_m_-_jeff_mann_-_frank_-_diani_barreto)
+
+---
+template: Beispiele
+
+
+## SS7
+
+* Protokoll mit dem die (Mobil-)Telefonnetze untereinander kommunizieren
+* Wo befindet sich ein Teilnehmer?
+* SMS-Services per SS7
+* ursprünglich wenige Dienste mit SS7-Zugang => wenig Sicherheitsmaßnahmen
+* immer mehr Dienste mit SS7-Zugang => ungeschützter Zugang zu Services wie
+  * Lokalisierung von Teilnehmern
+* Videos
   * [SS7: Locate. Track. Manipulate.](https://media.ccc.de/v/31c3_-_6249_-_en_-_saal_1_-_201412271715_-_ss7_locate_track_manipulate_-_tobias_engel) 
   * [Locating Mobile Phones using SS7](https://media.ccc.de/v/25c3-2997-en-locating_mobile_phones_using_ss7)
-* Lampe mit Pi
-* [Samsung 8 Iris Scanner](https://media.ccc.de/v/biometrie-s8-iris-fun)
-* [Blinkenrocket](http://blinkenrocket.de/)
-* [rad1o](https://rad1o.badge.events.ccc.de/)
+
+---
+template: Beispiele
+
+
+## Lampe mit RhaspberryPi
+
+* RhaspberryPi (günstigr ARM-basierter Minirechner)
+* LED-Strip per SPI ansteuern
+* Steuerung über Webapp
+* Steuerung über HomeKit
+* Animationen
+* Farbe nach Zeit
+
+---
+template: Beispiele
+
+## Samsung 8 Iris Scanner
+
+.center[<iframe width="1024" height="576" src="https://media.ccc.de/v/biometrie-s8-iris-en/oembed" frameborder="0" allowfullscreen></iframe>]
+
+---
+template: Beispiele
+
+
+## Blinkenrocket
+
+* Bausatz zum Löten Lernen
+* 8x8 LED
+* Animationen
+* Laufschrift
+* [Website](http://blinkenrocket.de/)
+
+---
+template: Beispiele
+
+## rad1o
+
+* Badge vom Chaos Communication Camp 2015
+* SDR (Software Defined Radio)
+* [Website](https://rad1o.badge.events.ccc.de/)
+
+---
+
 * Kongress
-* [Camp](https://events.ccc.de/camp/2015/wiki/Main_Page)
-  * https://www.youtube.com/watch?v=DALuvqIAYrU
 * andere CCC-Treffen
   * [GPN](https://entropia.de/GPN16)
 
@@ -95,18 +167,14 @@ template: Beispiele
 
 .center[<iframe width="560" height="315" src="https://www.youtube.com/embed/YKmEYTuVcY8?list=PLd4ivY6k8sKZmzPGBYNtATKEG8PSeeXqd" frameborder="0" allowfullscreen></iframe>]
 
----
-template: Beispiele
-
-## Samsung 8 Iris Scanner
-
-.center[<iframe width="1024" height="576" src="https://media.ccc.de/v/biometrie-s8-iris-en/oembed" frameborder="0" allowfullscreen></iframe>]
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create();
+      var slideshow = remark.create({
+        ratio: "16:9"
+      });
     </script>
   </body>
 </html>
