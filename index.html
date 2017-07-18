@@ -24,6 +24,15 @@
         font-size: 200%;
       }
 
+      .large2 li {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+
+      .large2 {
+        font-size: 150%;
+      }
+
       .huge {
         font-size: 400%;
       }
@@ -231,6 +240,136 @@ class: middle
 ]
 
 ---
+# Hacken und IT-Sicherheit
+
+.large2[
+* Finden,
+* Ausnutzen,
+* Beheben und
+* Veröffentlichen
+
+von Sicherheitslücken in Computersystemen
+]
+
+---
+# Was sind Sicherheitslücken?
+
+.large2[
+* ausnutzbare Fehler im Programmcode oder der Konfiguration
+    * mangelnde Überprüfung von Benutzereingaben
+    * falsche Annahmen über die Umgebung
+    * ...
+]
+
+---
+# Wo gibt es Sicherheitslücken?
+
+.right[<iframe width="560" height="315" src="https://www.youtube.com/embed/Ed1OjAuRARU?start=30" frameborder="0" allowfullscreen></iframe><br>
+Ronen et al.: http://iotworm.eyalro.net/]
+
+.large2[
+* Betriebssysteme
+* Desktopanwendungen, <br> Apps, Websites
+* Eingebettete Systeme, <br>
+    Internet of Things
+    * Drucker, Lampen
+    * Autos, Kraftwerke
+
+&rArr; überall
+]
+
+---
+# Beispiel: Speicherüberlauf
+
+* Die Eingabe ist größer als der reservierte Speicherplatz
+
+
+```
+    | Name:              |ist Lehrer?
+    +--------------------+-------+----------------
+    |                    |n e i n|
+    +--------------------+-------+----------------
+     |__________________|
+        10 Zeichen
+```
+
+--
+
+* Eingabe von `"Alice"`
+
+```
+    | Name:              |ist Lehrer?
+    +--------------------+-------+----------------
+    | A l i c e          |N E I N|
+    +--------------------+-------+----------------
+     |__________________|
+        10 Zeichen
+```
+
+--
+* Eingabe von `"MaximilianJA  "`
+
+```
+    | Name:              |ist Lehrer?
+    +--------------------+-------+----------------
+    | M a x i m i l i a n|J A    |
+    +--------------------+-------+----------------
+     |__________________|  ^
+        10 Zeichen         | Überlauf
+```
+
+---
+# Beispiel: Injection
+
+.large2[
+Login mit Benutzername und Passwort
+
+*   Wähle Benutzer mit Namen <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>, wenn <br>
+    das Passwort gleich <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> ist.
+]
+
+--
+.large2[
+*   Wähle Benutzer mit Namen <u>&nbsp;`administrator`&nbsp;</u>, wenn <br>
+    das Passwort gleich <u>&nbsp;`geheim`&nbsp;</u> ist.
+]
+
+--
+.large2[
+*   Wähle Benutzer mit Namen <u>&nbsp;`administrator`&nbsp;</u>, wenn <br>
+    das Passwort gleich <u>&nbsp;`geheim ist oder 1=1`&nbsp;</u> ist.
+
+`\(1 = 1\)` ist immer wahr
+
+&rArr; Anmeldung ohne Kenntniss des Passwortes möglich
+]
+
+---
+# Wer sucht Sicherheitslücken?
+
+.large2[
+* Wissenschaftler
+* Firmen
+* Privatleute
+* ...
+* Kriminelle
+* Geheimdienste
+]
+
+---
+# Wieso veröffentlichen?
+
+.large2[
+* Geheimhaltung schützt nicht
+* Öffentliche Schwachstellen lassen sich nicht ignorieren
+
+Beispiel: WannaCry (Mai 2017)
+* über 200.000 Computer infiziert
+* Lücke war der NSA bekannt
+]
+
+
+---
 class: middle, center
 
 .huge[
@@ -240,10 +379,20 @@ class: middle, center
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
     <script>
       var slideshow = remark.create({
         ratio: "16:9"
       });
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
     </script>
   </body>
 </html>
