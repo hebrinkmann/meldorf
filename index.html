@@ -281,42 +281,30 @@ Ronen et al.: http://iotworm.eyalro.net/]
 ---
 # Beispiel: Speicherüberlauf
 
+.large2[
 * Die Eingabe ist größer als der reservierte Speicherplatz
+]
 
+<img width="800px" src="./overflow-0.png"/>
 
-```
-    | Name:              |ist Lehrer?
-    +--------------------+-------+----------------
-    |                    |n e i n|
-    +--------------------+-------+----------------
-     |__________________|
-        10 Zeichen
-```
+---
+# Beispiel: Speicherüberlauf
 
---
-
+.large2[
 * Eingabe von `"Alice"`
+]
 
-```
-    | Name:              |ist Lehrer?
-    +--------------------+-------+----------------
-    | A l i c e          |N E I N|
-    +--------------------+-------+----------------
-     |__________________|
-        10 Zeichen
-```
+<img width="800px" src="./overflow-1.png"/>
 
---
+---
+# Beispiel: Speicherüberlauf
+
+.large2[
 * Eingabe von `"MaximilianJA  "`
+]
 
-```
-    | Name:              |ist Lehrer?
-    +--------------------+-------+----------------
-    | M a x i m i l i a n|J A    |
-    +--------------------+-------+----------------
-     |__________________|  ^
-        10 Zeichen         | Überlauf
-```
+<img width="800px" src="./overflow-2.png"/>
+
 
 ---
 # Beispiel: Injection
