@@ -1,0 +1,28 @@
+\documentclass{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{bigstrut}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+
+\setlength\tabcolsep{.3em}
+\begin{tabular}{|ll}
+    Name: & Ist Lehrer? \bigstrut[b] \\
+    \hline
+    \ttfamily \phantom{M a x i m i l i a n} & \ttfamily N E I N \bigstrut \\
+    % \ttfamily A l i c e \phantom{i l i a n} & \ttfamily N E I N \bigstrut \\
+    % \ttfamily M a x i m i l i a n & \ttfamily J A \bigstrut \\
+    \hline
+    \multicolumn{1}{c}{\mathstrut\upbracefill} & \phantom{\(\uparrow\)} \\
+    \multicolumn{1}{c}{10 Zeichen} & \phantom{Überlauf} \\
+    % \multicolumn{1}{c}{\mathstrut\upbracefill} & \(\uparrow\) \\
+    % \multicolumn{1}{c}{10 Zeichen} & Überlauf \\
+\end{tabular}
+
+\end{document}
